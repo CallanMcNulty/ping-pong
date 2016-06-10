@@ -1,7 +1,12 @@
 var pingPong = function(inputNumber) {
   var outputArray = [];
-  var increment = inputNumber/Math.abs(inputNumber);
-  for(var i=increment; i!=inputNumber+increment; i+=increment) {
+  var increment;
+  if(inputNumber===0) {
+    increment = 0;
+  } else {
+    increment = inputNumber/Math.abs(inputNumber);
+  }
+  for(var i=increment; Math.abs(i)<=Math.abs(inputNumber); i+=increment) {
     var item = "";
     if(i%3===0) {
       item += "ping";
@@ -13,6 +18,9 @@ var pingPong = function(inputNumber) {
       item = i;
     }
     outputArray.push(item);
+    if(increment===0) {
+      break;
+    }
   }
   return outputArray;
 }

@@ -34,6 +34,10 @@ Given an input number by the user, it will create a list of integers from zero t
   Example Input: 16
   Example Output [1, 2, "ping", ..., 13, 14, "pingpong", 16]
 
+* Given 0, output "pingpong"
+  Example Input: 0
+  Example Output: "pingpong"
+
 ## Support and contact details
 
 I can be contacted for support at jabberwocky222@gmail.com
