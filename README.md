@@ -22,6 +22,10 @@ Given an input number by the user, it will create a list of integers from zero t
   Example Input: -2
   Example Output [-1, -2]
 
+* Substitute "ping" for multiples of 3 in output
+  Example Input: 6
+  Example Output [1, 2, "ping", 4, 5, "ping"]
+
 ## Support and contact details
 
 I can be contacted for support at jabberwocky222@gmail.com
