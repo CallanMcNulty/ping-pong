@@ -30,6 +30,10 @@ Given an input number by the user, it will create a list of integers from zero t
   Example Input: 6
   Example Output [1, 2, "ping", 4, "pong", "ping"]
 
+* Substitute "pingpong" for multiples of 5 and 3 in output
+  Example Input: 16
+  Example Output [1, 2, "ping", ..., 13, 14, "pingpong", 16]
+
 ## Support and contact details
 
 I can be contacted for support at jabberwocky222@gmail.com

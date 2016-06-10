@@ -1,13 +1,17 @@
-var inputNumber = 6; //test value
+var inputNumber = 16; //test value
 
 var outputArray = [];
 var increment = inputNumber/Math.abs(inputNumber);
 for(var i=increment; i!=inputNumber+increment; i+=increment) {
+  var item = "";
   if(i%3===0) {
-    outputArray.push("ping");
-  } else if(i%5===0) {
-    outputArray.push("pong");
-  } else {
-    outputArray.push(i);
+    item += "ping";
   }
+  if(i%5===0) {
+    item += "pong";
+  }
+  if(item==="") {
+    item = i;
+  }
+  outputArray.push(item);
 }
