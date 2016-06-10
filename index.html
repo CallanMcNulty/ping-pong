@@ -3,8 +3,9 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.0.0.js"></script>
-    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
     <title>Ping Pong</title>
   </head>
   <body>
@@ -16,12 +17,39 @@
         <label class="text-muted" for="in">Enter a Number</label>
         <input class="form-control input-lg" type="number" id="in">
         <button class="btn btn-primary btn-lg" type="submit">Ping-Pong It!</button>
+        <button id="settings-btn" class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog"></span></button>
         <button id="close" class="btn btn-danger btn-lg" type="button">Close</button>
       </form>
+
+      <div id="settingsModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <form id="settings" class="form-inline text-center">
+                <label class="text-muted">Replace numbers divisible by</label>
+                <input class="customDiv form-control input-lg" type="number" val="4">
+                <label class="text-muted">with</label>
+                <input class="customVal form-control input-lg" type="text" val="fizz">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="save" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="results" class="center-block">
         <ul id="out">
         </ul>
       </div>
+
+
     </div>
   </body>
 </html>

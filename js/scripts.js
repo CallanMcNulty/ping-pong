@@ -1,4 +1,4 @@
-var pingPong = function(inputNumber) {
+var pingPong = function(inputNumber, customDivisor, customValue) {
   var outputArray = [];
   var increment; //positive input: 1, negative input: -1, zero input: 0
   if(inputNumber===0) {
@@ -14,6 +14,9 @@ var pingPong = function(inputNumber) {
     if(i%5===0) {
       item += "pong";
     }
+    if(i%customDivisor===0 && customDivisor!=0) {
+      item += customValue;
+    }
     if(item==="") {
       item = i;
     }
@@ -27,23 +30,29 @@ var pingPong = function(inputNumber) {
 
 
 $(document).ready(function() {
-  $("#results").hide();
-  $("#close").hide();
+  var customDivisor = 0;
+  var customValue = "";
   $("form#main").submit(function(event) {
     event.preventDefault();
-    $("#out").empty();
-    $("#results").show();
-    $("#close").show();
     var input = parseInt($("#in").val());
     $("#in").val("");
-    var output = pingPong(input);
-    output.forEach(function(outValue) {
-      $("#out").append("<li>"+outValue+"</li>");
-    });
+    var output = pingPong(input, customDivisor, customValue);
+    if(output.length > 0) {
+      $("#out").empty();
+      $("#results").show();
+      $("#close").show();
+      output.forEach(function(outValue) {
+        $("#out").append("<li>"+outValue+"</li>");
+      });
+    }
   });
   $("#close").click(function() {
     $("#out").empty();
     $("#results").hide();
     $("#close").hide();
+  });
+  $("#save").click(function() {
+    customDivisor = parseInt($(".customDiv").val());
+    customValue = $(".customVal").val();
   });
 });

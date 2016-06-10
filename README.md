@@ -38,6 +38,10 @@ Given an input number by the user, it will create a list of integers from zero t
   Example Input: 0
   Example Output: "pingpong"
 
+* Take a custom word and a custom divisor from the user and substitute that word for multiples of that divisor in output according to the same rules as "ping" and "pong"
+  Example Input: number: 12, custom word: "pang", custom divisor: 4
+  Example Output: [1, 2, "ping", "pang", "pong", "ping", 7, "pang", 9, "pong", 11, "pingpang"]
+
 ## Support and contact details
 
 I can be contacted for support at jabberwocky222@gmail.com
