@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'action_man';
+  src: url('fonts/Action_Man_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'action_man', Arial, sans-serif;
+  background-color: #FAF9D7;
+}
+
+.page-header {
+  background-color: #8BDFF0;
+  margin-top: 0px;
+}
+
+#main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button, #in {
+  margin-top: 10px;
+}
+
+#results {
+  display: none;
+  color: #5C5C5C;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 5%;
+  margin-top: 30px;
+  width: 35%;
+  min-width: 300px;
+  background-color: #FADCF8;
+  border: 3px solid #DBA7D1;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px;
+}
+
+#out {
+  background-color: white;
+  padding: 10px;
+  padding-left: 30%;
+  border-radius: 5px;
+  width: 90%;
+}

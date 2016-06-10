@@ -1,6 +1,6 @@
 var pingPong = function(inputNumber) {
   var outputArray = [];
-  var increment;
+  var increment; //positive input: 1, negative input: -1, zero input: 0
   if(inputNumber===0) {
     increment = 0;
   } else {
@@ -27,9 +27,11 @@ var pingPong = function(inputNumber) {
 
 
 $(document).ready(function() {
+  $("#results").hide();
   $("form#main").submit(function(event) {
     event.preventDefault();
     $("#out").empty();
+    $("#results").show();
     var input = parseInt($("#in").val());
     $("#in").val("");
     var output = pingPong(input);
