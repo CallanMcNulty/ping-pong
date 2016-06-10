@@ -32,6 +32,10 @@ button, #in {
   width: 100px;
 }
 
+#add {
+  width: 150px;
+}
+
 #results {
   display: none;
   color: #5C5C5C;

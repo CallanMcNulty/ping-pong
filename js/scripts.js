@@ -1,4 +1,4 @@
-var pingPong = function(inputNumber, customDivisor, customValue) {
+var pingPong = function(inputNumber, customDivisors, customValues) {
   var outputArray = [];
   var increment; //positive input: 1, negative input: -1, zero input: 0
   if(inputNumber===0) {
@@ -8,14 +8,10 @@ var pingPong = function(inputNumber, customDivisor, customValue) {
   }
   for(var i=increment; Math.abs(i)<=Math.abs(inputNumber); i+=increment) {
     var item = "";
-    if(i%3===0) {
-      item += "ping";
-    }
-    if(i%5===0) {
-      item += "pong";
-    }
-    if(i%customDivisor===0 && customDivisor!=0) {
-      item += customValue;
+    for(var c=0; c<=customValues.length; c++) {
+      if(i%customDivisors[c]===0 && customDivisors[c]!=0) {
+        item += customValues[c];
+      }
     }
     if(item==="") {
       item = i;
@@ -30,13 +26,13 @@ var pingPong = function(inputNumber, customDivisor, customValue) {
 
 
 $(document).ready(function() {
-  var customDivisor = 0;
-  var customValue = "";
+  var customDivisors = [3, 5];
+  var customValues = ["ping", "pong"];
   $("form#main").submit(function(event) {
     event.preventDefault();
     var input = parseInt($("#in").val());
     $("#in").val("");
-    var output = pingPong(input, customDivisor, customValue);
+    var output = pingPong(input, customDivisors, customValues);
     if(output.length > 0) {
       $("#out").empty();
       $("#results").show();
@@ -52,7 +48,29 @@ $(document).ready(function() {
     $("#close").hide();
   });
   $("#save").click(function() {
-    customDivisor = parseInt($(".customDiv").val());
-    customValue = $(".customVal").val();
+    customDivisors = [];
+    customValues = [];
+    $(".customDiv").each(function() {
+      customDivisors.push($(this).val());
+    });
+    $(".customVal").each(function() {
+      customValues.push($(this).val());
+    });
+  });
+  $("#add").click(function() {
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value=""> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="">');
+  });
+  $("#remove").click(function() {
+    $("#pairs label:last").remove();
+    $("#pairs input:last").remove();
+    $("#pairs label:last").remove();
+    $("#pairs input:last").remove();
+    customDivisors.pop();
+    customValues.pop();
+  });
+  $("#restore").click(function() {
+    $("#pairs").empty();
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="3"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="ping">');
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="5"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="pong">');
   });
 });

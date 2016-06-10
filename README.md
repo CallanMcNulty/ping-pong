@@ -42,6 +42,10 @@ Given an input number by the user, it will create a list of integers from zero t
   Example Input: number: 12, custom word: "pang", custom divisor: 4
   Example Output: [1, 2, "ping", "pang", "pong", "ping", 7, "pang", 9, "pong", 11, "pingpang"]
 
+* Take an arbitrary sized set of custom word-divisor pairs from the user and replace the default set with the user supplied set, then follow the same rules with these pairs as with "ping" and "pong"
+  Example Input: number: 12, custom pairs: 2-"mic", 5-"mac", 7-"paddywack"
+  Example Output: [1, "mic", 3, "mic", "mac", "mic", "paddywack", "mic", 9, "micmac"]
+
 ## Support and contact details
 
 I can be contacted for support at jabberwocky222@gmail.com
