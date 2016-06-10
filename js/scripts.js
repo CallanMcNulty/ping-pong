@@ -28,15 +28,22 @@ var pingPong = function(inputNumber) {
 
 $(document).ready(function() {
   $("#results").hide();
+  $("#close").hide();
   $("form#main").submit(function(event) {
     event.preventDefault();
     $("#out").empty();
     $("#results").show();
+    $("#close").show();
     var input = parseInt($("#in").val());
     $("#in").val("");
     var output = pingPong(input);
     output.forEach(function(outValue) {
       $("#out").append("<li>"+outValue+"</li>");
     });
+  });
+  $("#close").click(function() {
+    $("#out").empty();
+    $("#results").hide();
+    $("#close").hide();
   });
 });

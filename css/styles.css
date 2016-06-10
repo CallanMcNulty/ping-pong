@@ -43,6 +43,7 @@ button, #in {
   background-color: white;
   padding: 10px;
   padding-left: 30%;
+  border: 1px solid #8BDFF0;
   border-radius: 5px;
   width: 90%;
 }
