@@ -15,8 +15,12 @@ Given an input number by the user, it will create a list of integers from zero t
 ## Specs
 
 * Given a positive integer input, count up to that integer making no substitutions
-* Example Input: 2
-* Example Output [1, 2]
+  Example Input: 2
+  Example Output [1, 2]
+
+* Given a negative integer input, count down to that integer making no substitutions
+  Example Input: -2
+  Example Output [-1, -2]
 
 ## Support and contact details
 
