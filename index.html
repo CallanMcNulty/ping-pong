@@ -35,10 +35,12 @@
                   <input class="customDiv form-control" type="number" value="3">
                   <label class="text-muted">with</label>
                   <input class="customVal form-control" type="text" value="ping">
+                  <hr>
                   <label class="text-muted">Replace numbers divisible by</label>
                   <input class="customDiv form-control" type="number" value="5">
                   <label class="text-muted">with</label>
                   <input class="customVal form-control" type="text" value="pong">
+                  <hr>
                 </div>
                 <button id="remove" class="btn btn-warning" type="button">Remove</button>
                 <button id="add" class="btn btn-success" type="button">Add</button>
@@ -46,7 +48,9 @@
             </div>
             <div class="modal-footer">
               <button id="restore" type="button" class="btn btn-primary">Restore Defaults</button>
+              <br>
               <button id="save" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              <br>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -58,7 +62,35 @@
         </ul>
       </div>
 
+      <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">About Ping Pong</h4>
+            </div>
+            <div class="modal-body">
+              <p>Ping Pong is a program by Callan McNulty created to practice using Javascript, jQuery, CSS, HTML, and Bootstrap.</p>
+              <p>Ping Pong will count up to the number entered into the main form field when the 'Ping-Pong It!' button is clicked and then display the list of resulting values. This list can be cleared by clicking the 'Close' button. The program will also substitute words for certain values depending upon their divisibility. Values divisible by multiple divisors will join the specified words in the order in which the substitution rules were written and display the result. By default, the program will substitute 'ping' for numbers divisible by three and 'pong' for numbers divisible by five.</p>
+              <p>These settings can be changed in the settings menu, which can be opened by clicking on the 'cog' icon. Here new rules for word substitution can be entered, or existing ones can be deleted. If there are not enough form fields in the settings menu for all the desired rules, more can be added using the 'Add' button, and if there are too many, they can be removed with the 'Remove' button. When the settings menu is displaying the correct rules, the 'Save Changes' button will tell the program to use those rules the next time the 'Ping-Pong It!' button is clicked. If at any time it becomes desirable to revert any settings changes, the 'Restore Defaults' button in the Settings menu will enter the two default rules back into the menu and remove any others. At this point clicking 'Save Changes' will restore the default behavior of the program.</p>
+            </div>
+            <div class="modal-footer">
+              <h5>&copy; 2016 Callan McNulty</h5>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <nav class="navbar navbar-fixed-bottom navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h5>&copy; 2016 Callan McNulty</h5>
+        </div>
+        <button id="about" class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#aboutModal">About</button>
+      </div>
+    </nav>
   </body>
 </html>

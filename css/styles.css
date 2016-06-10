@@ -10,6 +10,10 @@ body {
   background-color: #FAF9D7;
 }
 
+.container {
+  margin-bottom: 150px;
+}
+
 .page-header {
   background-color: #8BDFF0;
   margin-top: 0px;
@@ -20,7 +24,7 @@ body {
   margin-bottom: 20px;
 }
 
-button, #in {
+#main button, #in {
   margin-top: 10px;
 }
 
@@ -36,12 +40,21 @@ button, #in {
   width: 150px;
 }
 
+#settings button {
+  margin-top: 10px;
+}
+
+br {
+  display: none;
+}
+
 #results {
   display: none;
   color: #5C5C5C;
   font-size: 20px;
   padding: 10px;
   padding-left: 5%;
+  padding-top: 30px;
   margin-top: 30px;
   width: 35%;
   min-width: 300px;
@@ -55,7 +68,42 @@ button, #in {
   background-color: white;
   padding: 10px;
   padding-left: 30%;
-  border: 1px solid #8BDFF0;
+  border: 2px solid #8BDFF0;
   border-radius: 5px;
   width: 90%;
+}
+
+.navbar {
+  background-color: #8BDFF0;
+  color: white;
+  padding: 10px;
+  padding: 15px;
+  border-color: #8BDFF0;
+}
+
+.modal-footer h5 {
+  float: left;
+}
+
+#about {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  img {
+    width: 90%;
+  }
+  #settings input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  br {
+    display: block;
+  }
+  .modal-footer button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

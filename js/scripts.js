@@ -58,19 +58,20 @@ $(document).ready(function() {
     });
   });
   $("#add").click(function() {
-    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value=""> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="">');
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value=""> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value=""> <hr>');
   });
   $("#remove").click(function() {
     $("#pairs label:last").remove();
     $("#pairs input:last").remove();
     $("#pairs label:last").remove();
     $("#pairs input:last").remove();
+    $("#pairs hr:last").remove();
     customDivisors.pop();
     customValues.pop();
   });
   $("#restore").click(function() {
     $("#pairs").empty();
-    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="3"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="ping">');
-    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="5"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="pong">');
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="3"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="ping"> <hr>');
+    $("#pairs").append('<label class="text-muted">Replace numbers divisible by</label>  <input class="customDiv form-control" type="number" value="5"> <label class="text-muted">with</label> <input class="customVal form-control" type="text" value="pong"> <hr>');
   });
 });
